@@ -1,25 +1,25 @@
-// const express = require("express")
-// const router = express.Router()
-// const Transaction = require("../models/transaction")
+const express = require("express")
+const router = express.Router()
 
-// router.get('/transactions', async (req, res) => {
-//     let transactions = await Transaction.find({})
-//     res.send(transactions)
-// })
+const Image = require("../models/image")
 
-// router.post('/transaction', async (req, res) => {
-//     let addTransaction = new Transaction({ ...req.body })
-//     await addTransaction.save()
-//     let transactions = await Transaction.find({})
-//     // res.send(transactions)
-// })
+router.get('/images', async (req, res) => {
+    let images = await Image.find({})
+    res.send(images)
+})
+router.post('/save', async (req, res) => {
+    let addPicture = new Image({ ...req.body })
+    await addPicture.save()
+     res.send(addPicture)
+})
 
-// router.delete('/transaction/:id', async (req, res) => {
-//     const { id } = req.params
-//     await Transaction.findOneAndDelete({ _id: id })
-//     let transactions = await Transaction.find({})
-//     res.send(transactions)
-// })
+
+router.delete('/unlike/:id', async (req, res) => {
+    const { id } = req.params
+    await Image.findOneAndDelete({ _id: id })
+    let images = await Image.find({})
+    res.send(images)
+})
 
 // router.get('/categories', (req, res) => {
 //     console.log('server-------------------------------------');
@@ -36,4 +36,4 @@
 
 
 
-// module.exports = router
+module.exports = router
