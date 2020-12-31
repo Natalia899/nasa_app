@@ -19,10 +19,21 @@ export default function Search() {
         })
     }, [searchedImage])
 
+    const save = async (newLike) => {
+        newLike.likeButton = 'disLike'
+        newLike.like = true
+      let newList =  await axios.post("http://localhost:4200/save", newLike)
+    //   console.log(newList.data)
+    //   setPictures(newList.data)
+
+    }
+
     return (
         <div>
-            <input name='picture' onChange={({ target }) => setSearchedImage(target.value)} value={searchedImage} />
-            { searchedImage !== "" ? pictures.map(p => <MediaCard picture={p} />) : null}
+            <input  name='picture' onChange={({ target }) => setSearchedImage(target.value)} value={searchedImage} />
+           {/* {pictures.map(p => <MediaCard picture={p} save={save} />)} */}
+
+            { searchedImage !== "" ? pictures.map(p => <MediaCard picture={p} save={save} />) : null}
         </div>
     )
 }

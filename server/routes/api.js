@@ -10,7 +10,7 @@ router.get('/images', async (req, res) => {
 router.post('/save', async (req, res) => {
     let addPicture = new Image({ ...req.body })
     await addPicture.save()
-     res.send(addPicture)
+    res.send(addPicture)
 })
 
 

@@ -8,6 +8,7 @@ export default function NavBar() {
     return (
             <Paper square>
                 <Tabs className={classes.navbar}>
+                    
                     <Link to="/"><Tab className={classes.navLink} label="Home" /></Link>
                     <Link to="/search"><Tab className={classes.navLink} label="Search" /> </Link>
                     <Link to="/favorites"><Tab className={classes.navLink} label="Favorites" /> </Link>

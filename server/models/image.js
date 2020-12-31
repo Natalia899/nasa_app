@@ -7,7 +7,7 @@ const imageSchema = new Schema({
     image: String,
     description: String,
     like: Boolean,
-likeButton: String
+    likeButton: String
 })
 
 
