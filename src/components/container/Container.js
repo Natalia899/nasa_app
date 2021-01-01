@@ -6,9 +6,6 @@ import Home from './Home'
 import Favorites from './Favorites'
 import MediaCard from './MediaCard'
 
-
-
-
 export default function Container() {
   return (
     <div>
@@ -17,6 +14,5 @@ export default function Container() {
       <Route path="/favorites" exact render={() => <Favorites />} />
       <Route exact path='/favorites/:id' render={({ match }) => <MediaCard match={match} />} />
     </div>
-   
   )
 }
