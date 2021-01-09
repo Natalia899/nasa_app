@@ -20,7 +20,6 @@ export default function Favorites() {
   return (
     <div>
       {pictures.map(p => <MediaCard picture={p} disLike={disLike} />)}
-      {/* {pictures.length > 0 ? pictures.map(p => <MediaCard picture={p} />) : null}  */}
     </div>
   )
 }

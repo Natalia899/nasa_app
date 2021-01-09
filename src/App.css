@@ -1,16 +1,49 @@
 body {
   background-color: rgb(248, 249, 250);
 }
- 
+
 input {
   margin-top: 15px;
   margin-left: 30%;
   background-color: rgb(237, 246, 249);
-  color:  rgb(141, 153, 174);
+  color: rgb(141, 153, 174);
   height: 30px;
   font-size: larger;
   width: 30%;
   padding-left: 20px;
   border-radius: 5px;
   border: rgb(108, 117, 125) solid 3px;
+}
+
+.homeImage {
+  height: 300px;
+  width: 300px;
+  margin-left: 25%;
+  margin-bottom: 5%;
+}
+
+.homeTitle {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.homeDescription{
+  text-align: center;
+}
+
+.home {
+  border: rgb(33, 45, 64) solid 2px;
+  border-radius: 5px;
+  box-shadow: rgb(56, 93, 148) 0px 2px 8px 0px;
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  min-height: 400px;
+  overflow: hidden;
+  width: 700px;
+  padding: 5%;
+  padding-top: 3px;
+  display: flex;
+  justify-content: center;
 }
